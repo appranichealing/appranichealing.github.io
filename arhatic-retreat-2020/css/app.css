@@ -17,28 +17,9 @@ body, html {
   height: 100%;
 }
 
-.caption {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 100%;
-  text-align: center;
-  color: #000;
-}
-
-.caption span.border {
-  background-color: #111;
-  color: #fff;
-  padding: 18px;
-  font-size: 25px;
-  letter-spacing: 10px;
-}
-
-h3 {
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  font: 20px "Lato", sans-serif;
-  color: #111;
+.header-logo-org {
+  height: 70px;
+  width: 302px;
 }
 
 .center {
@@ -55,8 +36,35 @@ h3 {
   overflow:auto;
 }
 
+.jumbotron {
+  background: white;
+}
+
 @media (max-width: 992px) {
   .center {
     width: 90%;
+  }
+  .header-logo-org img {
+    height: 30px;
+    width: 112px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .display-4 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 550px) and (max-width: 1299px){
+  .display-4 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 350px) and (max-width: 549px) {
+  .display-4 {
+    font-size: 1.5rem;
+    font-weight: bold;
   }
 }
