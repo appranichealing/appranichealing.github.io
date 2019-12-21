@@ -23,7 +23,7 @@ body, html {
 }
 
 .center {
-  width: 50%;
+  width: 75%;
   height: 450px;
   position:absolute; /*it can be fixed too*/
   left:0; right:0;
