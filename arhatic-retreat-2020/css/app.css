@@ -12,7 +12,7 @@ body, html {
   background-size: cover;
 }
 .bgimg-1 {
-  background-image: url("https://i.imgur.com/R764mJK.jpg");
+  background-image: url('https://i.imgur.com/R764mJK.jpg');
   /*background-image: url('../images/background.jpg');*/
   height: 100%;
 }
@@ -77,6 +77,16 @@ body, html {
 .scroll-to-top.show {
   opacity: 1;
   visibility: visible;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+.sticky + .container {
+  padding-top: 2em;
 }
 
 @media (max-width: 992px) {

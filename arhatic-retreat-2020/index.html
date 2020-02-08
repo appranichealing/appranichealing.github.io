@@ -35,7 +35,7 @@
     <div class="center">
       <div class="main-content">
         <div class="my-3">
-          <ul class="nav justify-content-end">
+          <ul id="navbar" class="nav justify-content-end">
             <li class="nav-item">
               <a class="nav-link active" href="#home">Home</a>
             </li>
@@ -227,21 +227,18 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script>
+
     $(function () {
-      var btn = $('.scroll-to-top');
+      var navbar = $('#navbar');
+      var sticky = navbar.offset().top;
 
-      $('.bgimg-1').scroll(function () {
-        alert('scroll');
-        if ($(window).scrollTop() > 300) {
-          btn.addClass('show');
-        } else {
-          btn.removeClass('show');
+      $('.center').scroll(function() {
+        if(this.scrollTop >= sticky) {
+          navbar.addClass('sticky');
         }
-      });
-
-      btn.on('click', function (e) {
-        e.preventDefault();
-        $('html, body').animate({ scrollTop: 0 }, '300');
+        else {
+          navbar.removeClass('sticky');
+        }
       });
     });
   </script>
